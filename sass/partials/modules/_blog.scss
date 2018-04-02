@@ -1,0 +1,105 @@
+/* -------------------
+*--------Blog---------
+----------------------*/
+.blog {
+  margin: 0;
+  width: 75%;
+}
+
+.blog-content {
+  display: flex;
+  margin-top: $space-small;
+}
+
+// Blog Item
+.blog-item {
+  margin: 0;
+  margin-right: 5%;
+  width: 30%;
+
+  &:last-child {
+    margin-right: 0%;
+  }
+
+  div {
+    background-color: $gray-dark;
+    height: 125px;
+    margin-bottom: 2.0rem;
+    width: 100%;
+  }
+
+  h3 {
+    color: $purple;
+    font-size: 1.4rem;
+  }
+
+  p,
+  small {
+    color: $gray;
+    font-size: $font-size-x-small;
+  }
+
+  p {
+    margin-top: 2.0rem;
+  }
+}
+
+/* -------------------
+*---Media Queries----
+----------------------*/
+@media only screen and (max-width: 780px) {
+  .blog {
+    width: 68%;
+  }
+
+  .blog-item {
+    margin-right: 0;
+    width: 48%;
+
+    &:first-child {
+      margin-right: 4%
+    }
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  .aside {
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .content-wrap {
+    display: block;
+  }
+
+  .blog {
+    width: 100%;
+  }
+
+  .blog {
+    margin-bottom: 6.0rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .blog-content {
+    display: block;
+  }
+ 
+  .blog-item {
+    width: 80%;
+ 
+    &:first-child {
+      display: none;
+   }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .blog-item {
+    margin: 0 auto;
+  }
+}

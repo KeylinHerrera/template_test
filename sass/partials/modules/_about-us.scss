@@ -1,0 +1,70 @@
+/* -------------------
+*------About Us-------
+----------------------*/
+.about-item {
+  border-bottom: 1px solid $gray-light; 
+  display: flex;
+  font-size: $font-size-x-small;
+  padding: 1.6rem 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    color: $gray-dark;
+  }
+
+  p {
+    color: $gray;
+  }
+
+  a {
+    color: $purple;
+  }
+  
+  i {
+    margin-left: 0.5rem;
+  }
+
+}
+
+.about-item__img {
+  background-color: $gray-dark;
+  height: $space-large;
+  margin-right: $space-xxx-small;
+  width: $space-large;
+}
+
+/* -------------------
+*---Media Queries----
+----------------------*/
+@media only screen and (max-width: 640px) {
+  aside {
+    width: 100%;
+  }
+
+  .about-us-content {
+    margin-top: 4rem;
+  }
+
+  .about-item {
+    border: none;
+  }
+
+  .about__img {
+    margin: 0;
+    width: 20%;
+
+    div {
+      height: 7rem;
+      margin: 0;
+      width: 7rem;
+    }
+  }
+
+  .about__info {
+    margin: 0;
+    margin-left: 2rem;
+  }
+}

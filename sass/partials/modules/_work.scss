@@ -1,0 +1,85 @@
+/* -------------------
+*-------Projects------
+----------------------*/
+.projects {
+  display: flex;
+  margin-top: 4.0rem;
+}
+
+.project-container {
+  margin: 0;
+  text-align: center;
+  width: 25%;
+
+  &:hover {
+
+    .project-item__title,
+    .project-item__text {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+}
+
+// Project Item
+.project-item {
+  float: left;
+  width: 80%;
+}
+
+.project-item__title,
+.project-item__text {
+  background-color: #eeeeee;
+  padding: 14px;
+}
+
+.project-item__img {
+  background-color: $gray-dark;
+  height: 22.5rem;
+  margin: 0;
+}
+
+.project-item__text {
+  color: $gray;
+}
+
+/* -------------------
+*---Media Queries----
+----------------------*/
+@media only screen and (max-width: 960px) {
+  .project-container {
+    width: 33.33%;
+
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .project-container {
+    width: 50%;
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
+  .project-item {
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+ .projects {
+   display: block;
+ }
+
+ .project-container {
+   width: 100%;
+
+    &:first-child {
+      margin-bottom: 2rem;
+    }
+  }
+}

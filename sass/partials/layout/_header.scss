@@ -1,0 +1,149 @@
+/* -------------------
+*--------Logo---------
+----------------------*/
+.header__logo {
+  float: left;
+  margin-top: $space-small;
+
+  h1 {
+    color: $purple;
+    font-size: $font-size-x-large;
+  }
+
+  p {
+    color: $gray;
+    font-size: $font-size-x-small;
+    margin-top: 1.4rem;
+  }
+}
+
+/* -------------------
+*---Desktop Menu----
+----------------------*/
+.header__nav,
+.header__button-open {
+  float: right;
+  overflow: hidden;
+
+  li {
+    float: left;
+
+    a {
+      color: $gray;
+      font-size: $font-size-x-small;
+      padding: $space-regular $space-xx-small $space-x-small;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+}
+
+.header__button-open,
+.mobile-menu {
+  display: none;
+}
+
+/* -------------------
+*---Mobile Menu----
+----------------------*/
+.menu-container {
+  background: $black;
+  display: none;
+  font-size: $font-size-small;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+.menu__button--close {
+  img  {
+    margin: $space-large 2.4rem;
+    position: absolute;
+    right: 13px;
+    top: 0;
+    width: 3%;
+  }
+}
+
+.menu-container--in {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+
+  a {
+    color: $white;
+  }
+}
+
+
+.menu {
+  li {
+    display: table;
+    line-height: 3;
+  }
+
+  a {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;;
+
+    &:hover {
+      color: $purple;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+  }
+}
+
+/* -------------------
+*---Media Queries----
+----------------------*/
+@media only screen and (max-width: 960px) {
+  .header__logo {
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    p {
+      font-size: $font-size-x-small;
+      margin-top: 0.8rem;
+    }
+  }
+
+  .header__nav {
+    li a {
+      font-size: $font-size-x-small;
+      padding: 53px 14px 33px;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .header__nav {
+    li a {
+      font-size: 0.8rem;
+      padding: 53px 14px 33px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .header__nav,
+  .main-menu {
+    display: none;
+  }
+
+  .header__button-open {
+    display: block;
+  }
+}
